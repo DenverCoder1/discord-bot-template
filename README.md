@@ -47,3 +47,7 @@ If you require additional API keys or variables specific to an enviroment, they 
 ## IDE Configuration
 
 IDE config such as the `.vscode` folder do not normally belong on GitHub since they are often specific to a particular environment. To make sure GitHub will ignore the `.vscode` folder uncomment the line at the end of the `.gitignore`.
+
+## Coming soon
+
+This repo will eventually contain info on how to use slash commands and other interactions with Nextcord (these features are still in development).
