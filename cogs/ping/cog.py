@@ -1,3 +1,4 @@
+from utils.embedder import embed_success
 from nextcord.ext import commands
 
 
@@ -16,7 +17,7 @@ class Ping(commands.Cog, name="Ping"):
         # log in console that a ping was received
         print("Received ping")
         # respond to the message
-        await ctx.send("Pong!")
+        await ctx.send(embed=embed_success("Pong!"))
 
 
 # This function will be called when this extension is loaded.
