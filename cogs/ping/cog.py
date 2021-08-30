@@ -1,4 +1,4 @@
-from discord.ext import commands
+from nextcord.ext import commands
 
 
 class Ping(commands.Cog, name="Ping"):
@@ -10,7 +10,7 @@ class Ping(commands.Cog, name="Ping"):
         """A command which simply acknowledges the user's ping.
         Usage:
         ```
-        !ping
+        ?ping
         ```
         """
         # log in console that a ping was received
