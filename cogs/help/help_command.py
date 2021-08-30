@@ -1,6 +1,6 @@
-from nextcord.embeds import EmptyEmbed
 import config
 import nextcord
+from nextcord.embeds import EmptyEmbed
 from nextcord.ext import commands
 
 

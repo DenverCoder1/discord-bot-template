@@ -1,5 +1,6 @@
-import nextcord
 from typing import Optional, Union
+
+import nextcord
 from nextcord.embeds import EmptyEmbed, _EmptyEmbed
 
 DEFAULT_COLOR = nextcord.Colour.blurple()

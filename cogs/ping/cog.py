@@ -1,5 +1,5 @@
-from utils.embedder import embed_success
 from nextcord.ext import commands
+from utils.embedder import embed_success
 
 
 class Ping(commands.Cog, name="Ping"):
