@@ -1,13 +1,15 @@
 # Discord Bot Template
 
-This repo is a template for easy creation of maintainable [Discord.py](https://discordpy.readthedocs.io/en/latest/index.html) bots.
+<a href="https://discord.gg/fPrdqh3Zfu" alt="Discord" title="Dev Pro Tips Discussion & Support Server">
+  <img src="https://img.shields.io/discord/819650821314052106?color=7289DA&logo=discord&logoColor=white"/></a>
+
+This repo is a template for easy creation of maintainable Python Discord bots.
+
+The library used is [Nextcord](https://github.com/nextcord/nextcord), a maintained fork of Discord.py.
+
+Nextcord documentation: https://nextcord.readthedocs.io/en/latest/
 
 📺 Python Discord Tutorial: https://www.youtube.com/playlist?list=PL9YUC9AZJGFG6larkQJYio_f0V-O1NRjy
-
-<p align="center">
-  <a href="https://discord.gg/fPrdqh3Zfu" alt="Discord" title="Dev Pro Tips Discussion & Support Server">
-    <img src="https://img.shields.io/discord/819650821314052106?color=7289DA&logo=discord&logoColor=white&style=for-the-badge"/></a>
-</p>
 
 
 ## How to use
@@ -28,10 +30,12 @@ To run your bot, you'll need a token and other secrets set in a `.env` file.
 
 Create a file called `.env` and place it in the root of your project.
 
+(You can do this by creating a copy of `.env.sample` and renaming it to `.env`)
+
 The contents should look something like this (where the part after `=` is the token you received from the Discord Developer Portal)
 
 ```
-DISCORD_TOKEN=EXAMPLE_AJKN343NKJAFAN234DFA_LNLDA3DJK24N4
+DISCORD_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
 If you require additional API keys or variables specific to an enviroment, they should also be added here. You can access them by adding a line such as `GUILD_ID = os.getenv("GUILD_ID", "")` to `config.py`.
@@ -43,3 +47,7 @@ If you require additional API keys or variables specific to an enviroment, they 
 ## IDE Configuration
 
 IDE config such as the `.vscode` folder do not normally belong on GitHub since they are often specific to a particular environment. To make sure GitHub will ignore the `.vscode` folder uncomment the line at the end of the `.gitignore`.
+
+## Coming soon
+
+This repo will eventually contain info on how to use slash commands and other interactions with Nextcord (these features are still in development).
