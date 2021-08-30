@@ -1,5 +1,5 @@
 from nextcord.embeds import EmptyEmbed
-from config import BOT_PREFIX
+import config
 import nextcord
 from nextcord.ext import commands
 
@@ -12,7 +12,7 @@ class NewHelpCommand(commands.MinimalHelpCommand):
     def get_ending_note(self):
         """Returns note to display at the bottom"""
         invoked_with = self.invoked_with
-        return f"Use {BOT_PREFIX}{invoked_with} [command] for more info on a command."
+        return f"Use {config.BOT_PREFIX}{invoked_with} [command] for more info on a command."
 
     def get_command_signature(self, command: commands.core.Command):
         """Retrieves the signature portion of the help page."""
@@ -32,8 +32,8 @@ class NewHelpCommand(commands.MinimalHelpCommand):
             name = "No Category" if cog is None else cog.qualified_name
             filtered = await self.filter_commands(commands, sort=True)
             if filtered:
-                # \u2002 = en space
-                value = "\u2002".join(f"{BOT_PREFIX}{c.name}" for c in filtered)
+                # \u2002 = middle dot
+                value = "\u2002".join(f"{config.BOT_PREFIX}{c.name}" for c in filtered)
                 if cog and cog.description:
                     value = f"{cog.description}\n{value}"
                 embed.add_field(name=name, value=value)
