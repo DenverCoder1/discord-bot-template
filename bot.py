@@ -15,9 +15,14 @@ def main():
     # To enable member intents:
     # intents.members = True
 
-    bot = commands.Bot(config.BOT_PREFIX, intents=intents)  # bot command prefix
+    # Set custom status to "Listening to ?help"
+    activity = nextcord.Activity(
+        type=nextcord.ActivityType.listening, name=f"{config.BOT_PREFIX}help"
+    )
 
-    # Get the modules of all cogs whose directory structure is modules/<module_name>/cog.py
+    bot = commands.Bot(config.BOT_PREFIX, intents=intents, activity=activity)
+
+    # Get the modules of all cogs whose directory structure is cogs/<module_name>/cog.py
     for folder in os.listdir("cogs"):
         if os.path.exists(os.path.join("cogs", folder, "cog.py")):
             bot.load_extension(f"cogs.{folder}.cog")
@@ -26,10 +31,6 @@ def main():
     async def on_ready():
         """When discord is connected"""
         print(f"{bot.user.name} has connected to Discord!")
-        activity = nextcord.Activity(
-            type=nextcord.ActivityType.listening, name=f"{config.BOT_PREFIX}help"
-        )
-        await bot.change_presence(activity=activity)
 
     # Run Discord bot
     bot.run(config.DISCORD_TOKEN)
