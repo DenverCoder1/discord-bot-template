@@ -1,7 +1,7 @@
 # Discord Bot Template
 
-<a href="https://discord.gg/fPrdqh3Zfu" alt="Discord" title="Dev Pro Tips Discussion & Support Server">
-  <img src="https://img.shields.io/discord/819650821314052106?color=7289DA&logo=discord&logoColor=white"/></a>
+[![Discord](https://img.shields.io/discord/819650821314052106?color=7289DA&logo=discord&logoColor=white)](https://discord.gg/fPrdqh3Zfu "Dev Pro Tips Discussion & Support Server")
+[![Powered by Nextcord](https://custom-icon-badges.herokuapp.com/badge/-Powered%20by%20Nextcord-0d1620?logo=nextcord)](https://github.com/nextcord/nextcord "Powered by Nextcord Python API Wrapper")
 
 This repo is a template for easy creation of maintainable Python Discord bots.
 
