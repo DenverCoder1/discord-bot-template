@@ -22,7 +22,11 @@ def main():
         type=nextcord.ActivityType.listening, name=f"{config.BOT_PREFIX}help"
     )
 
-    bot = commands.Bot(config.BOT_PREFIX, intents=intents, activity=activity)
+    bot = commands.Bot(
+        commands.when_mentioned_or(config.BOT_PREFIX),
+        intents=intents,
+        activity=activity,
+    )
 
     # Get the modules of all cogs whose directory structure is cogs/<module_name>/cog.py
     for folder in os.listdir("cogs"):
