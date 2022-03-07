@@ -44,6 +44,8 @@ If you require additional API keys or variables specific to an enviroment, they 
 
 `runtime.txt` and `Procfile` are used for Heroku configuration and can be deleted in case you do not plan on hosting there.
 
+Heroku setup tutorial: https://www.youtube.com/watch?v=EreE-0hQibM
+
 ## IDE Configuration
 
 IDE config such as the `.vscode` folder do not normally belong on GitHub since they are often specific to a particular environment. To make sure GitHub will ignore the `.vscode` folder uncomment the line at the end of the `.gitignore`.
