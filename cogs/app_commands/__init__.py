@@ -9,15 +9,15 @@ class ApplicationCommandsExample(commands.Cog, name="App Commands"):
 
     @nextcord.slash_command(description="Slash command that responds with 'Hello World'")
     async def my_slash_cmd(self, interaction: nextcord.Interaction):
-        await interaction.response.send_message("Hello world!")
+        await interaction.send(embed=embed_success("Hello World!"))
 
     @nextcord.slash_command(description="Slash command that repeats an argument")
     async def my_slash_cmd_2(self, interaction: nextcord.Interaction, my_arg: str):
-        await interaction.response.send_message(f"You said: `{my_arg}`")
+        await interaction.send(embed=embed_success(f"You said: {my_arg}"))
 
     @nextcord.user_command()
     async def my_user_cmd(self, interaction: nextcord.Interaction, member: nextcord.Member):
-        await interaction.response.send_message(f"Hello, {member.mention}!")
+        await interaction.send(f"Hello, {member.mention}!")
 
     @nextcord.message_command()
     async def my_message_cmd(self, interaction: nextcord.Interaction, message: nextcord.Message):

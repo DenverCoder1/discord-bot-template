@@ -43,9 +43,7 @@ class NewHelpCommand(commands.MinimalHelpCommand):
 
     async def send_cog_help(self, cog: commands.Cog):
         """implements cog help page"""
-        embed = nextcord.Embed(
-            title=f"{cog.qualified_name} Commands", colour=self.COLOUR
-        )
+        embed = nextcord.Embed(title=f"{cog.qualified_name} Commands", colour=self.COLOUR)
         if cog.description:
             embed.description = cog.description
 
@@ -79,4 +77,4 @@ class NewHelpCommand(commands.MinimalHelpCommand):
         await self.get_destination().send(embed=embed)
 
     # Use the same function as group help for command help
-    send_command_help = send_group_help
+    send_command_help = send_group_help  # type: ignore
