@@ -7,14 +7,17 @@ import config
 
 
 def main():
-    # allows privledged intents for monitoring members joining, roles editing, and role assignments
-    # these need to be enabled in the developer portal as well
+    # Allows privledged intents for monitoring members joining, roles editing, and role assignments
+    # These need to be enabled in the developer portal as well
     intents = nextcord.Intents.default()
 
-    # To enable guild intents:
+    # Required in order to read messages (eg. prefix commands)
+    intents.message_content = True
+
+    # To enable the guilds priveleged intent:
     # intents.guilds = True
 
-    # To enable member intents:
+    # To enable the members priveleged intent:
     # intents.members = True
 
     # Set custom status to "Listening to ?help"
@@ -28,14 +31,14 @@ def main():
         activity=activity,
     )
 
-    # Get the modules of all cogs whose directory structure is cogs/<module_name>/cog.py
+    # Get the modules of all cogs whose directory structure is ./cogs/<module_name>
     for folder in os.listdir("cogs"):
-        if os.path.exists(os.path.join("cogs", folder, "cog.py")):
-            bot.load_extension(f"cogs.{folder}.cog")
+        bot.load_extension(f"cogs.{folder}")
 
-    @bot.event
+    @bot.listen()
     async def on_ready():
-        """When discord is connected"""
+        """When Discord is connected"""
+        assert bot.user is not None
         print(f"{bot.user.name} has connected to Discord!")
 
     # Run Discord bot

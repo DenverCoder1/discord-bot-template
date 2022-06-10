@@ -11,7 +11,6 @@ Nextcord documentation: https://nextcord.readthedocs.io/en/latest/
 
 📺 Python Discord Tutorial: https://www.youtube.com/playlist?list=PL9YUC9AZJGFG6larkQJYio_f0V-O1NRjy
 
-
 ## How to use
 
 Click "use this template" at the top of this repo and follow the instructions, or alternatively, initialize a git repo and copy the template files into the directory.
@@ -49,7 +48,3 @@ Heroku setup tutorial: https://www.youtube.com/watch?v=EreE-0hQibM
 ## IDE Configuration
 
 IDE config such as the `.vscode` folder do not normally belong on GitHub since they are often specific to a particular environment. To make sure GitHub will ignore the `.vscode` folder uncomment the line at the end of the `.gitignore`.
-
-## Coming soon
-
-This repo will eventually contain info on how to use slash commands and other interactions with Nextcord (these features are still in development).
