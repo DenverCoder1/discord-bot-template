@@ -23,9 +23,7 @@ def embed_success(
     thumbnail: Optional[str] = None,
 ) -> nextcord.Embed:
     """Embed a success message and an optional description, footer, and url"""
-    return build_embed(
-        title, description, footer, url, nextcord.Colour.green(), image, thumbnail
-    )
+    return build_embed(title, description, footer, url, nextcord.Colour.green(), image, thumbnail)
 
 
 def embed_warning(
@@ -37,9 +35,7 @@ def embed_warning(
     thumbnail: Optional[str] = None,
 ) -> nextcord.Embed:
     """Embed a warning message and an optional description, footer, and url"""
-    return build_embed(
-        title, description, footer, url, nextcord.Colour.gold(), image, thumbnail
-    )
+    return build_embed(title, description, footer, url, nextcord.Colour.gold(), image, thumbnail)
 
 
 def embed_error(
@@ -51,9 +47,7 @@ def embed_error(
     thumbnail: Optional[str] = None,
 ) -> nextcord.Embed:
     """Embed an error message and an optional description, footer, and url"""
-    return build_embed(
-        title, description, footer, url, nextcord.Colour.red(), image, thumbnail
-    )
+    return build_embed(title, description, footer, url, nextcord.Colour.red(), image, thumbnail)
 
 
 def build_embed(
