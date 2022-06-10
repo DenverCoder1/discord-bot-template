@@ -3,4 +3,8 @@
     "[python]": {
         "editor.formatOnSave": true
     },
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "100"
+    ]
 }
